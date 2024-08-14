@@ -1,0 +1,82 @@
+//calculator in java
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Enter second number: ");
+        double num2 = scanner.nextDouble();
+
+        System.out.println("Select operation (+, -, *, /): ");
+        char operator = scanner.next().charAt(0);
+
+        double result;
+
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 == 0) {
+                    System.out.println("Error: Division by zero");
+                    return;
+                }
+                result = num1 / num2;
+                break;
+            default:
+                System.out.println("Invalid operator");
+                return;
+        }
+
+        System.out.println("Result: " + result);
+    }
+}
+
+//word count
+public class WordCount {
+    public static void main(String[] args) {
+        String text = "This is a simple word count program.";
+        String[] words = text.split("\\s+"); // Split by whitespace
+        int wordCount = words.length;
+
+        System.out.println("Word count: " + wordCount);
+    }
+}
+
+//word count terminal cmds in ubuntu
+Step 1: Open the terminal
+Step 2: $sudo apt-get update
+step 3: $sudo gedit /etc/apt/sources.list
+step 4: In sources.list file find and replace urls in.archive.ubuntu.com and security.ubuntu.com with old-releases.ubuntu.com
+step 5: Save and Close it
+step 6: now run $sudo apt-get update
+step 7: Check java is installed or not using $java -version
+step 8: $sudo apt-get install default-jre
+step 9: $sudo apt-get install default-jdk
+step 10: now check java version using $java -version it shows java jdk1.7
+step 11: Now check the localhost using $ssh localhost
+step 12: now, $sudo apt-get install openssh-server
+	password: admin for three times
+step 13: then $sudo apt-get install vsftpd
+step 14: now check localhost using $ssh localhost
+step 15: $ssh-keygen -t rsa
+	Press Enter for every option during this step
+	then see key generated
+step 16: Now open the URL: https://www.digitalocean.com/community/tutorials/how-to-install-hadoop-in-stand-alone-mode-on-ubuntu-16-04
+	and download hadoop 2.6 version
+	in this page goto step2 in that click Apache Hadoop Release page
+	then select first link from HTTP topic
+	Download the 2.6.5 binary file
+	then save it.
+step 17: Copy the downloaded tar file from downloads to home directory and extract it.
+step 18: After that to untar (like unzipping) the Hadoop in nitw_viper_user , follow the following commands.
